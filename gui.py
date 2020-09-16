@@ -2,6 +2,8 @@ import functions
 import time
 from tkinter import messagebox
 import tkinter as tk
+import tkinter.font as tkFont
+from tkinter import ttk
 
 
 class Calculator:
@@ -15,6 +17,8 @@ class Calculator:
         self.gui_calcu.title(self.title)
         self.gui_calcu.geometry("341x435")  # el tamaño será de 321 * 435
         self.copyRight()  # Show CopyRight
+        self.fontStyle = tkFont.Font(family="Chalkduster serif", size=20)  # Style for copyright logo on the interface
+        ttk.Style().configure('web.TLabel', foreground='blue', background='white')  # Style for web rel
         self.load_widgets()
         self.gui_calcu.mainloop()
 
@@ -34,27 +38,6 @@ class Calculator:
         """
         pass
 
-    def x_al_cuadrado_action(self):
-        """
-        button x²
-        :return:
-        """
-        pass
-
-    def raiz_action(self):
-        """
-        button raiz
-        :return:
-        """
-        pass
-
-    def div_action(self):
-        """
-        button div
-        :return:
-        """
-        pass
-
     def seven_action(self):
         """
         button seven
@@ -70,13 +53,6 @@ class Calculator:
         pass
 
     def nine_action(self):
-        """
-        button nine
-        :return:
-        """
-        pass
-
-    def por_action(self):
         """
         button nine
         :return:
@@ -104,10 +80,62 @@ class Calculator:
         """
         pass
 
+    def one_action(self):
+        """
+        button one
+        """
+
+    def two_action(self):
+        """
+        button two
+        """
+
+    def three_action(self):
+        """
+        button three
+        """
+
+    ############################################ operations methods #############################################
+
+    def x_al_cuadrado_action(self):
+        """
+        button x²
+        :return:
+        """
+        pass
+
+    def raiz_action(self):
+        """
+        button raiz
+        :return:
+        """
+        pass
+
+    def div_action(self):
+        """
+        button div
+        :return:
+        """
+        pass
+
+    def por_action(self):
+        """
+        button nine
+        :return:
+        """
+        pass
+
     def subtract_action(self):
         """
         button subtract
         """
+
+    def add_action(self):
+        """
+        button add
+        """
+
+    ######################################### themes methods ###################################################
 
     def blue_theme_action(self):
         """
@@ -127,6 +155,10 @@ class Calculator:
         self.five.configure(bg="blue", fg="white", highlightbackground="blue")
         self.six.configure(bg="blue", fg="white", highlightbackground="blue")
         self.subtract.configure(bg="blue", fg="white", highlightbackground="blue")
+        self.one.configure(bg="blue", fg="white", highlightbackground="blue")
+        self.two.configure(bg="blue", fg="white", highlightbackground="blue")
+        self.three.configure(bg="blue", fg="white", highlightbackground="blue")
+        self.add.configure(bg="blue", fg="white", highlightbackground="blue")
 
     def violet_theme_action(self):
         """
@@ -146,6 +178,10 @@ class Calculator:
         self.five.configure(bg="violet", fg="black", highlightbackground="violet")
         self.six.configure(bg="violet", fg="black", highlightbackground="violet")
         self.subtract.configure(bg="violet", fg="black", highlightbackground="violet")
+        self.one.configure(bg="violet", fg="black", highlightbackground="violet")
+        self.two.configure(bg="violet", fg="black", highlightbackground="violet")
+        self.three.configure(bg="violet", fg="black", highlightbackground="violet")
+        self.add.configure(bg="violet", fg="black", highlightbackground="violet")
 
     def red_theme_action(self):
         """
@@ -165,6 +201,78 @@ class Calculator:
         self.five.configure(bg="red", fg="black", highlightbackground="red")
         self.six.configure(bg="red", fg="black", highlightbackground="red")
         self.subtract.configure(bg="red", fg="black", highlightbackground="red")
+        self.one.configure(bg="red", fg="black", highlightbackground="red")
+        self.two.configure(bg="red", fg="black", highlightbackground="red")
+        self.three.configure(bg="red", fg="black", highlightbackground="red")
+        self.add.configure(bg="red", fg="black", highlightbackground="red")
+
+    def cantaloupe_theme_action(self):
+        """
+        button Cantaloupe theme
+        """
+        self.result.configure(bg="#78c44b", fg="black", highlightbackground="green")  # todo insert align right
+        self.c.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.x_al_cuadrado.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.raiz.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.div.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.seven.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.eight.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.nine.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.por.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.four.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.five.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.six.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.subtract.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.one.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.two.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.three.configure(bg="#78c44b", fg="black", highlightbackground="green")
+        self.add.configure(bg="#78c44b", fg="black", highlightbackground="green")
+
+    def original_theme_action(self):
+        """
+        button original button
+        """
+        self.result.configure(bg="black", fg="white", highlightbackground="black")  # todo insert align right
+        self.c.configure(bg="white", fg="black", highlightbackground="white")
+        self.x_al_cuadrado.configure(bg="white", fg="black", highlightbackground="white")
+        self.raiz.configure(bg="white", fg="black", highlightbackground="white")
+        self.div.configure(bg="white", fg="black", highlightbackground="white")
+        self.seven.configure(bg="white", fg="black", highlightbackground="white")
+        self.eight.configure(bg="white", fg="black", highlightbackground="white")
+        self.nine.configure(bg="white", fg="black", highlightbackground="white")
+        self.por.configure(bg="white", fg="black", highlightbackground="white")
+        self.four.configure(bg="white", fg="black", highlightbackground="white")
+        self.five.configure(bg="white", fg="black", highlightbackground="white")
+        self.six.configure(bg="white", fg="black", highlightbackground="white")
+        self.subtract.configure(bg="white", fg="black", highlightbackground="white")
+        self.one.configure(bg="white", fg="black", highlightbackground="white")
+        self.two.configure(bg="white", fg="black", highlightbackground="white")
+        self.three.configure(bg="white", fg="black", highlightbackground="white")
+        self.add.configure(bg="white", fg="black", highlightbackground="white")
+
+    def random_theme_action(self):
+        """
+        button random theme
+        """
+        bg = functions.random_color()
+        fg = functions.random_color()
+        self.result.configure(bg=bg, fg=fg, highlightbackground=bg)  # todo insert align right
+        self.c.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.x_al_cuadrado.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.raiz.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.div.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.seven.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.eight.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.nine.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.por.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.four.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.five.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.six.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.subtract.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.one.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.two.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.three.configure(bg=bg, fg=fg, highlightbackground=bg)
+        self.add.configure(bg=bg, fg=fg, highlightbackground=bg)
 
     def load_widgets(self):
         """
@@ -179,7 +287,7 @@ class Calculator:
         self.result = tk.Text(self.gui_calcu, height="2", width="30")
         self.result.configure(background="black", foreground="white")  # todo insert align right
         # self.result.insert(tk.END,"9")
-        self.result.grid(column=0, row=0, columnspan=5, pady=(20), padx=(22, 0))
+        self.result.grid(column=0, row=0, columnspan=5, pady=20, padx=(22, 0))
         #######################################  BUTTONS ######################################################
 
         # ROW 1
@@ -249,4 +357,44 @@ class Calculator:
         self.red_theme.grid(column=4, row=3, pady=(20, 0))
 
         # ROW 4
+        self.one = tk.Button(self.gui_calcu, text="1", width="5", height="2", command=self.one_action)
+        self.one.configure(background="black", foreground="white")
+        self.one.grid(column=0, row=4, padx=(20, 14), pady=(20, 0))
+
+        self.two = tk.Button(self.gui_calcu, text="2", width="5", height="2", command=self.two_action)
+        self.two.configure(background="black", foreground="white")
+        self.two.grid(column=1, row=4, padx=(0, 14), pady=(20, 0))
+
+        self.three = tk.Button(self.gui_calcu, text="3", width="5", height="2", command=self.three_action)
+        self.three.configure(background="black", foreground="white")
+        self.three.grid(column=2, row=4, padx=(0, 14), pady=(20, 0))
+
+        self.add = tk.Button(self.gui_calcu, text="+", width="5", height="2", command=self.add_action)
+        self.add.configure(background="black", foreground="white")
+        self.add.grid(column=3, row=4, padx=(0, 14), pady=(20, 0))
+
+        self.cantaloupe_theme = tk.Button(self.gui_calcu, text="Can", width="5", height="2",
+                                          command=self.cantaloupe_theme_action)
+        self.cantaloupe_theme.configure(background="#78c44b", foreground="black", highlightbackground="green",
+                                        relief="ridge")
+        self.cantaloupe_theme.grid(column=4, row=4, pady=(20, 0))
+
+        # ROW 5
+
+        self.original_theme = tk.Button(self.gui_calcu, text="original", width="10", height="2",
+                                        command=self.original_theme_action)
+        self.original_theme.grid(column=0, row=5, columnspan=3, padx=(20, 14), pady=(20, 0))
+
+        self.random_theme = tk.Button(self.gui_calcu, text="random", width="10", height="2",
+                                      command=self.random_theme_action)
+        self.random_theme.configure(background="pink", foreground="black", relief="ridge")
+        self.random_theme.grid(column=2, row=5, columnspan=3, pady=(20, 0))
+
+        # ROW 6
+        self.copy = tk.Label(self.gui_calcu, text="Copyright © 2020 INFOLOJO", font=self.fontStyle)
+        self.copy.grid(column=0, row=6, columnspan=5, padx=(15, 0), pady=(30, 0))
+
+        # ROW 7
+        self.web = ttk.Label(self.gui_calcu, text="https://www.infolojo.es", style='web.TLabel')
+        self.web.grid(column=0, row=7, columnspan=5, padx=(15, 0), pady=5)
 
