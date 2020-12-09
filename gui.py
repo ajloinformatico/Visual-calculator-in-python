@@ -124,36 +124,46 @@ class Calculator:
         self.result.insert(tk.END, "**")
 
     def raiz_action(self):
-        # todo continue here
         """
         button raiz
-        :return:
+        insert into tk.Text result"√"
+        :return (void):
         """
-        pass
+        self.result.insert(tk.END, "√")
 
     def div_action(self):
         """
         button div
-        :return:
+        insert into tk.Text result"/"
+        :return (void):
         """
-        pass
+        self.result.insert(tk.END, "/")
 
     def por_action(self):
         """
         button nine
-        :return:
+        insert into tk.Text "*"
+        :return (void):
         """
-        pass
+        self.result.insert(tk.END, "*")
 
     def subtract_action(self):
         """
+
         button subtract
+        insert into tk.Text "-"
+        :return (void):
         """
+        self.result.insert(tk.END, "-")
 
     def add_action(self):
         """
         button add
+        insert into tk.Text "+"
+        :return (void):
+
         """
+        self.result.insert(tk.END, "+")
 
     ######################################### themes methods ###################################################
 
